@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Hoja de respuestas - Práctica 2},
+    pdfpagemode=FullScreen,
+}
+\renewcommand{\contentsname}{Índice}
+
+\title{Modelos Computacionales \\ Hoja de respuestas - Práctica 2}
+\author{Miguel Ángel González Caminero}
+\date\noexpand
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{¿Qué ocurre si damos un valor negativo de LR? Da una explicación interpretando gráficamente lo que ocurre.}
+
+Si damos valores negativos a la tasa de aprendizaje, vemos como la línea que representa la neurona se va alejando cada vez más de los valores,
+sin ajustarse a estos. Esto se debe a que la función de optimización sigue la dirección de descenso del gradiente. Si damos valores negativos a LR,
+cambiamos el signo de esta, y por tanto nos alejamos del mínimo que se busca.
+
+\end{document}
