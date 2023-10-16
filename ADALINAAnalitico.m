@@ -11,18 +11,18 @@ load DatosLS10
 
 Data(:,end)=Data(:,end)==1;
 
-Limites=[-1.5, 2.5, -1.5, 2.5];
-
-
-W = PerceptronWeigthsGenerator(Data);
 Y = Data(:,end);
 
-       
 X = [Data(:,1:end-1) -ones(length(Data), 1)];
 W = inv(X'*X)*X'*Y;
+
+Output = (X*W) >= 0.5;
    
 
-acc = sum(Y == max(Signo(X*W), 0))/length(Y);
-acc
+accuracy = sum(Y == Output)/size(X, 1);
+accuracy
+
+ECM = (norm(Y - Output, 2))^2/size(X, 1);
+ECM
 
 
